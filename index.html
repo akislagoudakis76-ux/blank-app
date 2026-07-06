@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#05141f" />
+  <title>AZURA — Luxury Yachts &amp; Bespoke Charters</title>
+  <meta name="description" content="AZURA crafts extraordinary journeys across the world's oceans aboard a curated fleet of luxury yachts. Bespoke charters, timeless design, effortless service." />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Progress / scroll bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Cursor gloss -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="AZURA home">
+      <span class="nav__mark">◈</span>
+      <span class="nav__word">AZURA</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#fleet">Fleet</a>
+      <a href="#experience">Experience</a>
+      <a href="#charter">Charter</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn--ghost nav__cta">Enquire</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <canvas id="scene" class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__veil" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow reveal">Bespoke ocean journeys since 1998</p>
+      <h1 class="hero__title">
+        <span class="reveal" style="--d:.05s">The ocean,</span>
+        <span class="reveal hero__title-em" style="--d:.15s">curated.</span>
+      </h1>
+      <p class="hero__lede reveal" style="--d:.28s">
+        A private fleet of the world's most exquisite yachts, paired with a
+        crew who anticipate every desire. Sail somewhere unforgettable.
+      </p>
+      <div class="hero__actions reveal" style="--d:.4s">
+        <a href="#fleet" class="btn btn--gold">Explore the fleet</a>
+        <a href="#charter" class="btn btn--line">Plan a charter</a>
+      </div>
+    </div>
+    <a href="#marque" class="hero__scroll" aria-label="Scroll down">
+      <span></span>Scroll
+    </a>
+    <div class="hero__stats">
+      <div class="reveal" style="--d:.5s"><b>32</b><small>Yachts in fleet</small></div>
+      <div class="reveal" style="--d:.58s"><b>68</b><small>Destinations</small></div>
+      <div class="reveal" style="--d:.66s"><b>25y</b><small>On the water</small></div>
+    </div>
+  </section>
+
+  <!-- MARQUE / INTRO -->
+  <section class="marque" id="marque">
+    <div class="marque__grid">
+      <div class="marque__lead">
+        <p class="section-tag reveal">The AZURA standard</p>
+        <h2 class="reveal" style="--d:.08s">Effortless luxury, engineered down to the last reflection.</h2>
+      </div>
+      <p class="marque__body reveal" style="--d:.16s">
+        Every voyage is composed like a piece of music — the glide of polished
+        teak underfoot, sunlight breaking across the water, a chilled glass
+        arriving before you thought to ask. We handle the invisible so you
+        experience only the extraordinary.
+      </p>
+    </div>
+  </section>
+
+  <!-- FLEET -->
+  <section class="fleet" id="fleet">
+    <div class="section-head">
+      <p class="section-tag reveal">The Fleet</p>
+      <h2 class="reveal" style="--d:.08s">Signature vessels</h2>
+    </div>
+    <div class="fleet__grid">
+      <article class="card tilt reveal" style="--d:.05s">
+        <div class="card__media">
+          <img loading="lazy" alt="Sleek motor yacht cutting through turquoise water"
+            src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1100&q=80" />
+          <span class="card__gloss" aria-hidden="true"></span>
+        </div>
+        <div class="card__body">
+          <div class="card__row"><h3>Serene 47m</h3><span class="card__price">from €95k / wk</span></div>
+          <p>Tri-deck flagship. 6 suites, glass-bottom spa pool, beach club.</p>
+          <span class="card__meta">12 Guests · 9 Crew · Mediterranean</span>
+        </div>
+      </article>
+
+      <article class="card tilt reveal" style="--d:.13s">
+        <div class="card__media">
+          <img loading="lazy" alt="Luxury sailing yacht at golden hour"
+            src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=80" />
+          <span class="card__gloss" aria-hidden="true"></span>
+        </div>
+        <div class="card__body">
+          <div class="card__row"><h3>Aeolus 38m</h3><span class="card__price">from €62k / wk</span></div>
+          <p>Carbon sailing yacht. Silent propulsion, open-air dining, sun deck.</p>
+          <span class="card__meta">10 Guests · 7 Crew · Caribbean</span>
+        </div>
+      </article>
+
+      <article class="card tilt reveal" style="--d:.21s">
+        <div class="card__media">
+          <img loading="lazy" alt="Yacht anchored beside a vibrant coastline"
+            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=80" />
+          <span class="card__gloss" aria-hidden="true"></span>
+        </div>
+        <div class="card__body">
+          <div class="card__row"><h3>Halcyon 55m</h3><span class="card__price">from €140k / wk</span></div>
+          <p>Explorer class. Helipad, submarine bay, cinema, wellness deck.</p>
+          <span class="card__meta">14 Guests · 12 Crew · Worldwide</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE GALLERY -->
+  <section class="experience" id="experience">
+    <div class="section-head">
+      <p class="section-tag reveal">On board</p>
+      <h2 class="reveal" style="--d:.08s">A day that belongs only to you</h2>
+    </div>
+    <div class="gallery">
+      <figure class="gallery__item gallery__item--tall reveal">
+        <img loading="lazy" alt="Sun deck lounge overlooking the sea"
+          src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1000&q=80" />
+        <figcaption>Sun decks &amp; private lounges</figcaption>
+      </figure>
+      <figure class="gallery__item reveal" style="--d:.1s">
+        <img loading="lazy" alt="Crystal blue ocean from above"
+          src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1000&q=80" />
+        <figcaption>Untouched anchorages</figcaption>
+      </figure>
+      <figure class="gallery__item reveal" style="--d:.18s">
+        <img loading="lazy" alt="Ocean sunset horizon"
+          src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?auto=format&fit=crop&w=1000&q=80" />
+        <figcaption>Golden-hour crossings</figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--wide reveal" style="--d:.26s">
+        <img loading="lazy" alt="Yacht cruising open water"
+          src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=1400&q=80" />
+        <figcaption>Effortless passages, chef &amp; crew included</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CHARTER / SERVICES -->
+  <section class="charter" id="charter">
+    <div class="charter__inner">
+      <div class="section-head">
+        <p class="section-tag reveal">Bespoke Charter</p>
+        <h2 class="reveal" style="--d:.08s">We design the voyage around you</h2>
+      </div>
+      <div class="charter__grid">
+        <div class="feature reveal"><span class="feature__no">01</span><h3>Concierge planning</h3><p>An itinerary specialist curates every port, table and moment before you board.</p></div>
+        <div class="feature reveal" style="--d:.1s"><span class="feature__no">02</span><h3>Private chef</h3><p>Menus shaped to your palate, sourced from the finest markets along your route.</p></div>
+        <div class="feature reveal" style="--d:.2s"><span class="feature__no">03</span><h3>Toys &amp; tenders</h3><p>Seabobs, foils, dive gear and chase boats — the ocean becomes your playground.</p></div>
+        <div class="feature reveal" style="--d:.3s"><span class="feature__no">04</span><h3>Total discretion</h3><p>Vetted crew and private berths. Your journey stays entirely your own.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__panel reveal">
+      <div class="contact__copy">
+        <p class="section-tag">Enquire</p>
+        <h2>Begin your voyage</h2>
+        <p class="contact__sub">Tell us where the ocean should take you. A charter director replies within one business day.</p>
+        <ul class="contact__list">
+          <li><span>Call</span> +377 93 00 12 34</li>
+          <li><span>Write</span> charter@azura-yachts.com</li>
+          <li><span>Berth</span> Port Hercule, Monaco</li>
+        </ul>
+      </div>
+      <form class="contact__form" novalidate>
+        <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
+        <label>Email<input type="email" name="email" placeholder="you@email.com" required /></label>
+        <label>Destination<input type="text" name="dest" placeholder="Amalfi, Bahamas, Croatia…" /></label>
+        <label>Details<textarea name="msg" rows="3" placeholder="Party size, dates, dream itinerary…"></textarea></label>
+        <button type="submit" class="btn btn--gold btn--full">Request a proposal</button>
+        <p class="contact__note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <span class="nav__brand"><span class="nav__mark">◈</span><span class="nav__word">AZURA</span></span>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#fleet">Fleet</a><a href="#experience">Experience</a>
+        <a href="#charter">Charter</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer__base">
+      <small>© 1998–2026 AZURA Yachts. Crafted on the water.</small>
+      <small>Monaco · Fort Lauderdale · Auckland</small>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="assets/js/scene.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
