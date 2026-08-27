@@ -1,5 +1,5 @@
 /* ============================================================
-   AZURA — Hero 3D scene
+   AETHER MARINE — Hero 3D scene
    An animated shiny ocean with champagne + sea specular light.
    Minimal, calm, luxury. Degrades gracefully.
    ============================================================ */

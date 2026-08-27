@@ -1,6 +1,6 @@
 /* ============================================================
-   AZURA — Interactions
-   Reveal-on-scroll, 3D tilt cards, cursor gloss, nav, form.
+   AETHER MARINE — Interactions
+   Reveal-on-scroll, 3D tilt, parallax, count-up, cursor, nav, form.
    ============================================================ */
 (function () {
   "use strict";
@@ -58,6 +58,56 @@
     reveals.forEach((el) => el.classList.add("is-in"));
   }
 
+  /* ---- Count-up stats ---- */
+  const counters = document.querySelectorAll("[data-count]");
+  if (counters.length && "IntersectionObserver" in window && !reduced) {
+    const cio = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (!en.isIntersecting) return;
+          const el = en.target;
+          cio.unobserve(el);
+          const target = parseFloat(el.dataset.count) || 0;
+          const suffix = el.dataset.suffix || "";
+          const dur = 1400;
+          const start = performance.now();
+          function tick(now) {
+            const p = Math.min((now - start) / dur, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        });
+      },
+      { threshold: 0.5 }
+    );
+    counters.forEach((el) => cio.observe(el));
+  } else {
+    counters.forEach((el) => (el.textContent = (el.dataset.count || "") + (el.dataset.suffix || "")));
+  }
+
+  /* ---- Parallax on scroll ---- */
+  const parallax = Array.from(document.querySelectorAll("[data-parallax]"));
+  if (parallax.length && !reduced) {
+    let ticking = false;
+    const apply = () => {
+      const vh = window.innerHeight;
+      parallax.forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;
+        const speed = parseFloat(el.dataset.parallax) || 0.12;
+        const mid = r.top + r.height / 2 - vh / 2;
+        el.style.transform = `translate3d(0, ${(-mid * speed).toFixed(1)}px, 0)`;
+      });
+      ticking = false;
+    };
+    const request = () => { if (!ticking) { ticking = true; requestAnimationFrame(apply); } };
+    window.addEventListener("scroll", request, { passive: true });
+    window.addEventListener("resize", request);
+    apply();
+  }
+
   /* ---- Cursor gloss ---- */
   const glow = document.querySelector(".cursor-glow");
   if (glow && window.matchMedia("(hover: hover)").matches) {
@@ -71,10 +121,10 @@
     })();
   }
 
-  /* ---- 3D tilt on fleet cards ---- */
+  /* ---- 3D tilt on media cards ---- */
   if (!reduced && window.matchMedia("(hover: hover)").matches) {
     document.querySelectorAll(".tilt").forEach((card) => {
-      const max = 8; // degrees
+      const max = 7; // degrees
       let raf = null;
       function move(e) {
         const r = card.getBoundingClientRect();
@@ -109,7 +159,7 @@
         return;
       }
       note.style.color = "";
-      note.textContent = `Thank you, ${name.split(" ")[0]} — a charter director will be in touch within one business day.`;
+      note.textContent = `Thank you, ${name.split(" ")[0]} — the Aether Marine team will be in touch shortly to plan your voyage.`;
       form.reset();
     });
   }
